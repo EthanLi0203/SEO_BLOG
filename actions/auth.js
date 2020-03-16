@@ -15,8 +15,7 @@ export const signup = user => {
         .then(function(response){
             return response.json();
         })
-        .catch(err => console.log(err));
-        
+        .catch(err => console.log(err));       
 };
 
 export const signin = user => {
@@ -31,8 +30,7 @@ export const signin = user => {
        .then(function(response){
            return response.json();
        })
-       .catch(err => console.log(err));
-       
+       .catch(err => console.log(err));     
 };
 // set cookie
 export const setCookie = (key, value) => {

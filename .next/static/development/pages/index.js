@@ -27311,7 +27311,7 @@ var Index = function Index() {
 
 /***/ }),
 
-/***/ 3:
+/***/ 1:
 /*!**************************************************************************************************************************************!*\
   !*** multi next-client-pages-loader?page=%2F&absolutePagePath=%2FUsers%2Fethanli%2FDesktop%2FSEO_Blog%2Ffrontend%2Fpages%2Findex.js ***!
   \**************************************************************************************************************************************/
@@ -27334,5 +27334,5 @@ module.exports = dll_82519ec661270f7f484f;
 
 /***/ })
 
-},[[3,"static/runtime/webpack.js"]]]);
+},[[1,"static/runtime/webpack.js"]]]);
 //# sourceMappingURL=index.js.map
