@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import {APP_NAME} from '../config'
 import Router from 'next/router'
+import NProgress from 'nprogress'
 import Link from 'next/link'
 import {signout, isAuth} from '../actions/auth'
 
@@ -19,9 +20,12 @@ import {
   NavbarText
 } from 'reactstrap';
 
+Router.events.on('routeChangeStart', (url) => {NProgress.start()})
+Router.events.on('routeChangeComplete', (url) => {NProgress.done()})
+Router.events.on('routeChangeError', (err, url) => {NProgress.done()})
+
 const Header = (props) => {
   const [isOpen, setIsOpen] = useState(false);
-
   const toggle = () => setIsOpen(!isOpen);
 
   return (
@@ -61,10 +65,8 @@ const Header = (props) => {
                   <Link href="/user">
                     <NavLink>{`${isAuth().name}'s Dashboard`}</NavLink>
                   </Link>
-              </NavItem>
+                </NavItem>
               )}
-
-
 
             {isAuth() && (
               <NavItem>
