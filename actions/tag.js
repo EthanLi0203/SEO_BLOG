@@ -14,17 +14,17 @@ export const Create = (tag, token) => {
        .then(function(response){
            return response.json();
        })
-       .catch(err => console.log(err));       
+       .catch(error => console.log(error));       
 };
 
-export const Get = () => {
+export const getTags = () => {
     return fetch(`${API}/tags`, {
        method: 'GET',
        })
        .then(function(response){
            return response.json();
        })
-       .catch(err => console.log(err));       
+       .catch(error => console.log(error));       
 };
 
 export const SingleTag = (slug) => {
@@ -34,7 +34,7 @@ export const SingleTag = (slug) => {
        .then(function(response){
            return response.json();
        })
-       .catch(err => console.log(err));       
+       .catch(error => console.log(error));       
 };
 
 export const Remove = (slug, token) => {
@@ -49,5 +49,5 @@ export const Remove = (slug, token) => {
        .then(function(response){
            return response.json();
        })
-       .catch(err => console.log(err));       
+       .catch(error => console.log(error));       
 };
